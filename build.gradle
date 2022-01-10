@@ -23,6 +23,11 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    //ojdbc
+    maven { url "https://code.lds.org/nexus/content/groups/main-repo"}
+    //lombok
+    maven { url "https://plugins.gradle.org/m2/" }
+
 }
 
 dependencies {
@@ -31,6 +36,7 @@ dependencies {
     compileOnly 'org.springframework.boot:spring-boot-starter-data-jpa'
     compileOnly 'com.h2database:h2'
     compileOnly 'org.springframework.boot:spring-boot-starter-mustache'
+    compile files('libs/ojdbc8.jar')
     implementation('org.springframework.boot:spring-boot-starter-web')
     testCompileOnly 'org.springframework.boot:spring-boot-starter-data-jpa'
     testCompileOnly 'com.h2database:h2'
@@ -38,6 +44,8 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
     testCompileOnly 'org.springframework.boot:spring-boot-starter-mustache'
+    testCompile files('libs/ojdbc8.jar')
+    //testCompileOnly 'com.oracle:ojdbc6:11.2.0.3'
 
 }
 
