@@ -13,11 +13,11 @@ import javax.persistence.*;
 public class IT_Hospital {
 
     @Id
-    @Column(columnDefinition = "TEXT", nullable = false)
-    private String ihl_hosp_no;
+    @Column(columnDefinition = "TEXT", nullable = false, name = "IHL_HOSP_NO")
+    private String ihlHospNo;
 
     @Builder
     public IT_Hospital(String ihl_hosp_no){
-        this.ihl_hosp_no = ihl_hosp_no;
+        this.ihlHospNo = ihl_hosp_no;
     }
 }

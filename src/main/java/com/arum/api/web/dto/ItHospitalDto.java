@@ -5,9 +5,9 @@ import lombok.Getter;
 
 @Getter
 public class ItHospitalDto {
-    private String ihl_hosp_id;
+    private String ihlHospNo;
 
     public ItHospitalDto(IT_Hospital entity){
-        this.ihl_hosp_id = entity.getIhl_hosp_no();
+        this.ihlHospNo = entity.getIhlHospNo();
     }
 }

@@ -6,6 +6,6 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 public interface ITHOSPITALRepository extends JpaRepository<IT_Hospital, Long> {
-    @Query("SELECT p.ihl_hosp_no FROM IT_Hospital p")
+    @Query(value = "SELECT p.IHL_HOSP_NO FROM IT_Hospital p", nativeQuery = true)
     List<IT_Hospital> findAllDesc();
 }
